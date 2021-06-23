@@ -2,10 +2,10 @@ package main
 
 import (
 	"crypto/sha512"
-	"fmt"
-	"os"
-	"io"
 	"encoding/base64"
+	"fmt"
+	"io"
+	"os"
 )
 
 func hash(password string) string {
