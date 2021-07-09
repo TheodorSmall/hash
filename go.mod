@@ -1,4 +1,4 @@
-module github.com/TheodorSmall/sha512-hash
+module github.com/TheodorSmall/hash
 
 go 1.16
 
