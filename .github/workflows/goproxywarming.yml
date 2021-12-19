@@ -1,0 +1,14 @@
+name: Go Proxy Warming
+
+on:
+	push:
+	branches: [ goproxy ]
+  pull_request:
+    branches: [ goproxy ]
+
+  workflow_dispatch:
+
+jobs:
+  goproxy:
+    name: Go proxy warming
+    uses: andrewslotin/go-proxy-pull-action@v1.0.2
