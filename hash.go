@@ -82,13 +82,27 @@ func calcAlgorithm(algorithm string) crypto.Hash {
 }
 
 func main() {
-	if len(os.Args[1:]) != 2 {
-		fmt.Println("Usage: hash <algorithm> <password>")
-		os.Exit(1)
+	arg1 := ""
+	arg2 := ""
+
+	arglen := len(os.Args[1:])
+
+	if arglen < 1 {
+		fmt.Print("Algorithm: ")
+		fmt.Scanf("%s", &arg1)
+	} else {
+		arg1 = os.Args[1]
 	}
 
-	algorithm := calcAlgorithm(os.Args[1])
-	passhash := calcHash(algorithm, os.Args[2])
+	if arglen < 2 {
+		fmt.Print("Password: ")
+		fmt.Scanf("%s", &arg2)
+	} else {
+		arg2 = os.Args[2]
+	}
+
+	algorithm := calcAlgorithm(arg1)
+	passhash := calcHash(algorithm, arg2)
 
 	fmt.Printf("%s\n", passhash)
 }
