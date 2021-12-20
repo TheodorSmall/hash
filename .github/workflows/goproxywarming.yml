@@ -1,8 +1,8 @@
 name: Go Proxy Warming
 
 on:
-	push:
-	branches: [ goproxy ]
+  push:
+    branches: [ goproxy ]
   pull_request:
     branches: [ goproxy ]
 
